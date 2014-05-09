@@ -8,30 +8,33 @@
 
 	<meta charset="UTF-8" />
 	<title>The College of Business |  Washington State University</title>
-	
+
 	<!-- Stylesheet to incorporate into queue -->
-	
+
 	<!-- FAVICON -->
 	<link rel="shortcut icon" href="http://repo.wsu.edu/spine/1/favicon.ico" />
-	
+
 	<!-- RESPOND -->
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
-	
+
 	<!-- DOCS -->
 	<link type="text/plain" rel="author" href="http://repo.wsu.edu/spine/1/authors.txt" />
 	<link type="text/html" rel="help" href="http://brand.wsu.edu/media/web" />
-	
+
 	<!-- ANALYTICS -->
 	<!-- Your analytics code here -->
-	
+
 	<link rel='stylesheet' id='wsu-spine-css'  href='http://repo.wsu.edu/spine/1/spine.min.css?ver=0.1.1' type='text/css' media='all' />
 	<link rel='stylesheet' href='assets/css/jquery.fluidbox.css' type='text/css' media='all' />
+	<link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
 
 	<script type='text/javascript' src='http://spine.nbj.me/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
 	<script type='text/javascript' src='http://spine.nbj.me/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js?ver=3.8.3'></script>
 	<script type='text/javascript' src='http://repo.wsu.edu/spine/1/spine.min.js?ver=0.1.1'></script>
 	<script type='text/javascript' src='assets/js/jquery.fluidbox.min.js'></script>
+	<script type='text/javascript' src='assets/js/jquery.pjax.js'></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<!-- COMPATIBILITY -->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<noscript><style>#spine #spine-sitenav ul ul li { display: block !important; }</style></noscript>
@@ -43,7 +46,7 @@
 <div id="jacket" class="style-bookmark">
 <div id="binder" class="fluid folio max-1386">
 
-<main>
+<main id="primary-content">
 
 <header>
 	billboard
@@ -62,7 +65,7 @@
 			
 			<p>Duis ornare ac nisi vel porttitor. Nam porta, est quis bibendum accumsan, erat nulla euismod diam, vel malesuada mauris ipsum non diam. Aenean leo mauris, sodales sed hendrerit ac, tincidunt ac dolor. Ut hendrerit, urna et bibendum cursus, purus sapien molestie nunc, ac blandit nibh dolor at justo. Mauris justo libero, rhoncus vel mollis vitae, imperdiet ut velit. Integer facilisis nunc mi, sed condimentum eros porta sit amet. Cras lobortis sapien eget erat suscipit pharetra. Praesent vestibulum lacinia augue ut egestas.</p>
 			
-			<a href="https://news.wsu.edu/wp-content/uploads/2014/05/Victory-Gardens-cover-300.jpg"><img src="https://news.wsu.edu/wp-content/uploads/2014/05/Victory-Gardens-cover-300-204x300.jpg" /></a>
+			<a class="modal-image" href="https://news.wsu.edu/wp-content/uploads/2014/05/Victory-Gardens-cover-300.jpg"><img src="https://news.wsu.edu/wp-content/uploads/2014/05/Victory-Gardens-cover-300-204x300.jpg" /></a>
 
 			<p>Suspendisse ligula quam, tincidunt ut augue ultrices, rhoncus varius lorem. Maecenas et fermentum justo, vitae viverra odio. Aliquam et tempor dolor. Phasellus rhoncus, diam et facilisis rhoncus, lorem dolor aliquet lacus, eu convallis lorem enim eget justo. Vestibulum libero ipsum, rutrum in ligula ut, feugiat cursus arcu. Phasellus euismod justo et orci tristique, ut adipiscing lacus pulvinar. Aliquam dapibus, nulla at pharetra vulputate, lacus felis gravida sapien, porttitor pellentesque mi risus in nunc. Integer laoreet egestas faucibus. Pellentesque accumsan adipiscing metus, vel feugiat sem suscipit eget. Morbi sit amet suscipit mi, ac lobortis nunc. Nullam justo justo, auctor in egestas a, posuere vitae enim. Suspendisse felis risus, interdum quis massa sed, malesuada feugiat elit. Proin scelerisque risus in dolor volutpat interdum. Cras eu erat lacus. Donec lacinia purus eros.</p>
 			
@@ -87,7 +90,16 @@
 
 </main><!--/#page-->
 
-	
+<main id="main-replacement">
+<header>
+	<a href="sub-page.html" class="page-anchor">
+		<img style="width: 100%;" src="http://brand.wsu.edu/wp-content/themes/brand/images/pages/brand/shrooms.jpg" />
+		<span class="link-text">Read All About Mushrooms</span>
+	</a>
+</header>
+</main>
+<div style="display:none;" id="next-content-container"></div>
+
 <div id="spine" class="darker bleed shelved">
 <div id="glue" class="clearfix">
 
@@ -216,14 +228,6 @@
 <meta itemprop="email" class="required" content="info@wsu.edu">
 		<meta itemprop="ContactPoint" title="Contact Page..." class="optional" content="http://contact.wsu.edu">
 </div> 
-
-<script>
-(function ($) {
-	$(document).ready(function(){
-		$("a").fluidbox();
-	});
-}(jQuery));
-</script>
 
 </body>
 </html>
