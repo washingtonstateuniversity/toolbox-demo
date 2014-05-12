@@ -362,3 +362,215 @@ p {
 }
 }
 
+/*  SVG Bar Graph   ============================================================================= */
+
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-discretebar .nv-groups rect {
+  stroke-opacity: 0;
+  fill:#F3874B;
+  transition: fill-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear;
+}
+.nvd3 .nv-multibar .nv-groups rect:hover,
+.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+.nvd3 .nv-discretebar .nv-groups rect:hover {
+  fill-opacity: 1;
+}
+.nvd3 .nv-discretebar .nv-groups text,
+.nvd3 .nv-multibarHorizontal .nv-groups text {
+  font-weight: normal;
+  fill: #5E6A71;
+  stroke: #5E6A71;
+}
+.nv-legendWrap {
+  pointer-event:none;
+}/********************
+ * SVG CSS
+ */
+svg {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Trying to get SVG to act like a greedy block in all browsers */
+  display: block;
+
+}
+svg text {
+  font: normal 10px #5E6A71;
+  padding:8px;
+}
+svg .title {
+ font: bold 10px #5E6A71;
+}
+.nvd3 .nv-background {
+  fill: white;
+  fill-opacity: 0;
+  /*
+  pointer-events: none;
+  */
+}
+.nvd3.nv-noData {
+  font-size: 10px;
+  font-weight: normal;
+}
+/**********
+*  Brush
+*/
+.nv-brush .extent {
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+/**********
+*  Legend
+*/
+.nvd3 .nv-legend .nv-series {
+  cursor: pointer;
+  font-size:.875em;
+}
+.nvd3 .nv-legend .disabled circle {
+  fill-opacity: 0;
+}
+/**********
+*  Axes
+*/
+.nvd3 .nv-axis {
+  pointer-events:none;
+}
+
+.nvd3 .nv-axis path {
+  fill: none;
+  stroke: #5E6A71;
+  stroke-opacity: .75;
+  shape-rendering: crispEdges;
+}
+.nvd3 .nv-axis path.domain {
+  stroke-opacity: .75;
+}
+.nvd3 .nv-axis.nv-x path.domain {
+  stroke-opacity: 0;
+}
+.nvd3 .nv-axis line {
+  fill: none;
+  stroke: #5E6A71;
+  shape-rendering: crispEdges;
+}
+.nvd3 .nv-axis .zero line,
+/*this selector may not be necessary*/ .nvd3 .nv-axis line.zero {
+  stroke-opacity: .75;
+}
+.nvd3 .nv-axis .nv-axisMaxMin text {
+  font-weight: normal;
+}
+.nvd3 .x  .nv-axis .nv-axisMaxMin text,
+.nvd3 .x2 .nv-axis .nv-axisMaxMin text,
+.nvd3 .x3 .nv-axis .nv-axisMaxMin text {
+  text-anchor: middle
+}
+/**********
+*  Brush
+*/
+.nv-brush .resize path {
+  fill: #eee;
+  stroke:#5E6A71;
+}/********************
+ * TOOLTIP CSS for SVG graphs
+ */
+.nvtooltip {
+  position: absolute;
+  background-color: rgba(255,255,255,1.0);
+  padding: 1px;
+  border: 1px solid rgba(0,0,0,.2);
+  z-index: 10000;
+  text-align: left;
+  pointer-events: none;
+  display:none; /* Display none turns off tooltips */
+  white-space: nowrap;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Give tooltips that old fade in transition by
+    putting a "with-transitions" class on the container div.
+*/
+.nvtooltip.with-transitions, .with-transitions .nvtooltip {
+  transition: opacity 250ms linear;
+  -moz-transition: opacity 250ms linear;
+  -webkit-transition: opacity 250ms linear;
+
+  transition-delay: 250ms;
+  -moz-transition-delay: 250ms;
+  -webkit-transition-delay: 250ms;
+}
+
+.nvtooltip.x-nvtooltip,
+.nvtooltip.y-nvtooltip {
+  padding: 8px;
+}
+.nvtooltip h3 {
+  margin: 0;
+  padding: 4px 12px;
+  line-height: 18px;
+  font-weight: normal;
+  background-color: rgba(247,247,247,0.75);
+  text-align: center;
+
+  border-bottom: 1px solid #ebebeb;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.nvtooltip p {
+  margin: 0;
+  padding: 0 0;
+  margin:0;
+  text-align: center;
+}
+.nvtooltip span {
+  display: inline-block;
+  margin: 2px 0;
+}
+.nvtooltip table {
+  margin: 6px;
+  border-spacing:0;
+}
+.nvtooltip table td {
+  padding: 2px 9px 2px 0;
+  vertical-align: middle;
+}
+
+.nvtooltip table td.key {
+  font-weight:normal;
+}
+.nvtooltip table td.value {
+  text-align: right;
+  font-weight: bold;
+}
+.nvtooltip table tr.highlight td {
+  padding: 1px 9px 1px 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+.nvtooltip table td.legend-color-guide div {
+  width: 8px;
+  height: 8px;
+  vertical-align: middle;
+}
+.nvtooltip .footer {
+  padding: 3px;
+  text-align: center;
+}
+.nvtooltip-pending-removal {
+  position: absolute;
+  pointer-events: none;
+}
