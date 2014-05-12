@@ -55,7 +55,7 @@
 		$('html, body' ).animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			$('#primary-content' ).remove();
 			$(document).scrollTop(0);
-			$('#main-replacement' ).attr('id', 'primary-content');
+			$("a.modal-image" ).fluidbox({ stackIndex: 99999 });
 		});
 
 		// Override the back button to go back to the URL stored in history.
