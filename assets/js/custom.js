@@ -28,12 +28,20 @@
 		var next_content_container = $('#next-content-container');
 
 		/**
+		 * The main element that acts as the anchor for replacement content to
+		 * be pulled in and scrolled up.
+		 *
+		 * @type {*|HTMLElement}
+		 */
+		var main_replacement = $('#main-replacement');
+
+		/**
 		 * The top of the replacement content's image. We use this to determine
 		 * where the page should be scrolled to initially.
 		 *
 		 * @type {number}
 		 */
-		var scroll_to = Math.floor( $('#main-replacement img' ).offset().top );
+		var scroll_to = Math.floor( main_replacement.find('img').first().offset().top );
 
 		// Add some Skrollr data attributes to initiate CSS transformations on scroll.
 		primary_content.attr('data-' + (scroll_to - 200), 'transform: scaleX(1) scaleY(1);' );
@@ -44,7 +52,7 @@
 
 		// Add the replacement content to our replacement container and remove it from
 		// the temporary placeholder node.
-		$('#main-replacement').append( next_content_container.html() );
+		main_replacement.append( next_content_container.html() );
 		next_content_container.html(' ');
 
 		/**
@@ -56,7 +64,7 @@
 			primary_content.remove();
 			$(document).scrollTop(0);
 			$("a.modal-image" ).fluidbox({ stackIndex: 99999 });
-			$('#main-replacement' ).attr('id', 'primary-content');
+			main_replacement.attr('id', 'primary-content');
 		});
 
 		// Override the back button to go back to the URL stored in history.
