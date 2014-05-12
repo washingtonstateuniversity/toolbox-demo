@@ -52,7 +52,7 @@
 		 * main image. Skrollr handles the transform properties via CSS. Once the scroll
 		 * is completed, we remove the primary content and set the scroll to the top.
 		 */
-		$('html, body' ).animate({ scrollTop: scroll_to }, 1500, 'easeOutCubic', function(){
+		$('html, body' ).animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			$('#primary-content' ).remove();
 			$(document).scrollTop(0);
 		});
