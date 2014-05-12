@@ -53,9 +53,10 @@
 		 * is completed, we remove the primary content and set the scroll to the top.
 		 */
 		$('html, body' ).animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
-			$('#primary-content' ).remove();
+			primary_content.remove();
 			$(document).scrollTop(0);
 			$("a.modal-image" ).fluidbox({ stackIndex: 99999 });
+			$('#main-replacement' ).attr('id', 'primary-content');
 		});
 
 		// Override the back button to go back to the URL stored in history.
