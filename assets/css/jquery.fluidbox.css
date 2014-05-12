@@ -13,6 +13,7 @@
 	bottom: 0;
 	right: 0;
 	transition: .25s ease-in-out;
+	z-index: 9999999;
 }
 
 .fluidbox-wrap {
