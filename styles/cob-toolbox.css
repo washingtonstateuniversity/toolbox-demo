@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+body {
+	color: #5e6a71;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: #fff;
+	font: 15px/25px "Open Sans", Helvetica, "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color: #981e32
+}
+a:hover {
+	color: #c60c30
+}
+b, strong {
+	font-weight: 700
+}
+em, i {
+	font-style: italic
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 3px;
+	line-height: 1.25em;
+	letter-spacing: 0;
+	font-weight: 300;
+	color:#383d42;
+}
+h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 6em;
+	line-height:.9em;
+	padding: 0 0 .2em;
+	text-transform:uppercase;
+	font-weight:700 !important;
+	color:#fff;
+}
+h2 {
+	font-size: 2.8em;
+	margin: 0;
+	padding: .75em 0 .5em
+}
+h3 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.75em;
+	margin: 0;
+	padding: .75em 0 .5em;
+	text-transform:uppercase;
+	font-weight:300 !important;
+	color:#00a5bd;
+}
+h4 {
+	font-size: .9em;
+	margin: 0;
+	padding: .5em 0 .2em;
+	text-transform:uppercase;
+	font-weight:700;
+}
+h5 {
+	font-size: 1.2em;
+	margin: 0;
+	padding: .5em 0 .2em
+}
+h6 {
+	font-size: 1em;
+	margin: 0;
+	padding: .5em 0 .2em
+}
+p {
+	margin: 0;
+	padding-bottom: .8em;
+	font-weight: 300;
+}
+
+.feature, .feature2{
+	background-color:#000;
+	height: 600px;
+	width:100%;
+	padding:0;
+	color:#fff;
+	background: url(../images/cook1.jpg) 0% 50% no-repeat;
+	background-size: 100% auto;
+}
+
+.feature2{
+	color:#fff;
+	background: url(../images/dinner1.jpg) 50% 50% no-repeat;
+	background-size: 100% auto;
+}
+
+.center{
+	text-align:center;
+}
+
+.pic{
+	width:100%;
+	max-width:500px;
+	padding:1.5em 0;
+	}
+	
+.picPH{
+	padding: 0 0 1.5em;
+}
+
+.top200{
+	margin-top:150px;
+}
+
+.prlx{
+	min-height: 600px;
+	width:100%;
+	padding:0 0 300px 0;
+	background: url(../images/cook2.jpg) 0% 50% no-repeat;
+	background-size: 120% auto;
+}
+
+.blue{
+	color:#00a5bd;
+	font-weight:700 !important;
+}
+.grey-dark{
+	color:#383d42;
+	font-weight:700 !important;
+
+}
+.large{
+	font-size:1.125rem;
+	line-height:1.5rem;
+	font-weight:300 !important;
+}
+
+.topped{
+	diplay:block;
+	padding-bottom:20px;
+	margin: 20px 30px 0;
+	font-size:.8em;
+	font-weight:300px;
+	text-transform:uppercase;
+}
+
+/*  GRID COLUMN SETUP   ============================================================================= */
+
+.hold {
+	width: 95%;
+	margin-top: 0px;
+	padding: 10px 40px 0;
+}
+.hold-line {
+	width: 100%;
+}
+.hold-top {
+	width: 100%;
+	margin-top: 80px;
+}
+
+.col {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 3.5%;
+}
+.col:first-child {
+	margin-left: 0;
+} /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media screen and (max-width: 480px) {
+.col {
+	margin: 1% 0 1% 0%;
+}
+}
+
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.col_2-2 {
+	width: 100%;
+}
+.col_1-2 {
+	width: 48.25%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media screen and (max-width: 480px) {
+.col_2-2 {
+	width: 100%;
+}
+.col_1-2 {
+	width: 100%;
+}
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+	
+.col_3-3, .col_3-3a {
+	width: 100%;
+}
+.col_2-3, .col_2-3a {
+	width: 65.5%;
+}
+.col_1-3, .col_1-3a, .col_1-3rd {
+	width: 31%;
+}
+.col_1-3a, .col_2-3a, .col_3-3a, .col_1-3rd {
+	padding-top: 40px;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
+
+@media screen and (max-width: 770px) {
+.col_3-3 {
+	width: 95%;
+	padding: 0;
+	float: left;
+	margin: 1% 0;
+}
+.col_2-3 {
+	width: 95%;
+	padding: 0;
+	float: left;
+	margin: 1% 0;
+}
+.col_1-3, .col_1-3rd {
+	width: 95%;
+	float: left;
+	margin: 1% 0;
+}
+.col_1-3a, .col_2-3a, .col_3-3a, .col_1-3rd {
+	padding-top: 20px;
+}
+
+}
+
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.col_4-4, .col_4-4a {
+	width: 100%;
+}
+.col_3-4, .col_3-4a {
+	width: 74.15%;
+}
+.col_2-4, .col_2-4a {
+	width: 48.2%;
+}
+.col_1-4, .col_1-4a {
+	width: 22.35%;
+	display: table-column;
+}
+.col_1-4a, .col_2-4a, .col_3-4a, .col_4-4a {
+	padding-top: 20px;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
+
+@media screen and (max-width: 810px) {
+.col_4-4 {
+	width: 100%;
+}
+.col_3-4 {
+	width: 48.25%;
+}
+.col_2-4 {
+	width: 100%;
+	padding-top: 40px;
+	margin: 1% 0;
+}
+.col_1-4 {
+	width: 48.25%;
+	padding-top: 40px;
+}
+.col.col_1-4:nth-child(2n+1) {
+	margin-left: 0;
+
+}.col.col_1-4a:nth-child(2n+1) {
+	margin-left: 0;
+}
+.col_1-4a, .col_2-4a, .col_3-4a, .col_4-4a {
+	padding-top: 10px;
+	padding-left:0;
+	width: 95%;
+	margin-left: -10px;
+}
+}
+
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media screen and (max-width: 480px) {
+.col_4-4 {
+	width: 100%;
+}
+.col_3-4 {
+	width: 100%;
+}
+.col_2-4 {
+	width: 100%;
+}
+.col_1-4 {
+	width: 100%;
+}
+}
+
+
+/*  GRID OF SIX   ============================================================================= */
+
+
+.col_6-6 {
+	width: 100%;
+}
+.col_5-6 {
+	width: 82.75%;
+}
+.col_4-6 {
+	width: 65.5%
+}
+.col_3-6 {
+	width: 48.25%;
+}
+.col_2-6 {
+	width: 31%;
+}
+.col_1-6 {
+	width: 13.75%;
+}
+
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media screen and (max-width: 480px) {
+.col_6-6 {
+	width: 100%;
+}
+.col_5-6 {
+	width: 100%;
+}
+.col_4-6 {
+	width: 100%;
+}
+.col_3-6 {
+	width: 100%;
+}
+.col_2-6 {
+	width: 100%;
+}
+.col_1-6 {
+	width: 100%;
+}
+}
+
