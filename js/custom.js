@@ -17,6 +17,23 @@
 		 */
 		var cook_offset = Math.floor(cook.offset().top);
 
+		/**
+		 * The article container holding the headline and subhead.
+		 *
+		 * @type {*|HTMLElement}
+		 */
+		var headline = $('#article-headline');
+
+		/**
+		 * Where the headline article container hits the top of the screen on scroll.
+		 *
+		 * @type {number}
+		 */
+		var headline_offset = Math.floor(headline.offset().top);
+
+
+		headline.attr('data-' + (headline_offset - 100), 'margin-top: 150px; opacity:1;' );
+		headline.attr('data-' + (headline_offset + headline.height() + 100), 'margin-top: 350px; opacity:0;');
 
 		cook.attr('data-' + (cook_offset + 15), 'transform: translate3d(100px, 0px, 0px);' );
 		cook.attr('data-' + (cook_offset + cook.height()), 'transform: translate3d(0px, 0px, 0px');
