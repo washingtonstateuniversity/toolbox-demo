@@ -1,7 +1,7 @@
 (function($,nv){
 	var long_short_data = [
 		{
-			key: 'Medical School graduates per 100,000 residents',
+			key: 'College of Business graduates per 100,000 residents',
 			color: '#00a5bd',
 			values: [
 			{
@@ -34,7 +34,7 @@
 			chart = nv.models.multiBarHorizontalChart()
 				.x(function(d) { return d.label })
 				.y(function(d) { return d.value })
-				.margin({top: 30, right: 20, bottom: 50, left: 110})
+				.margin({top: 30, right: 20, bottom: 50, left: 120})
 //.showValues(true)
 				.tooltips(true)
 //.barColor(d3.scale.category20().range())
