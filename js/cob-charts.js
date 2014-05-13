@@ -23,7 +23,7 @@
 		var chart_width = chart1_container.width();
 
 		chart1_container.append('<div class="chart full with-3d-shadow with-transitions" id="chart1">' +
-			'<svg width="' + chart_width + '" height="200" viewBox="200 0 ' + chart_width + ' 200"></svg>' +
+			'<svg width="' + chart_width + '" height="200" viewBox="0 0 ' + chart_width + ' 200"></svg>' +
 			'</div>');
 
 		var chart;
