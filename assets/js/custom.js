@@ -4,8 +4,19 @@
 		// Add Fluidbox to any images designated for modals.
 		$("a.modal-image").fluidbox({ stackIndex: 99999 });
 
+		/**
+		 * The img container holding the cook.
+		 * @type {*|HTMLElement}
+		 */
 		var cook = $('#move-cook-left .bg-move');
+
+		/**
+		 * Where the cook image hits the top of the screen on scroll.
+		 *
+		 * @type {number}
+		 */
 		var cook_offset = Math.floor(cook.offset().top);
+
 
 		cook.attr('data-' + (cook_offset + 15), 'transform: translate3d(100px, 0px, 0px);' );
 		cook.attr('data-' + (cook_offset + cook.height()), 'transform: translate3d(0px, 0px, 0px');
