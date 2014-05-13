@@ -373,6 +373,10 @@ svg .title {
 	background-size: 120%;
 }
 
+#primary-content header {
+	height: auto;
+}
+
 #main-replacement header {
 	background-size: 100%;
 	height: auto;
