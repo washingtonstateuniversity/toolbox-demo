@@ -1,20 +1,16 @@
 (function($,nv){
 	var long_short_data = [
 		{
-			key: 'College of Business graduates per 100,000 residents',
+			key: 'Spring 2014',
 			color: '#00a5bd',
 			values: [
 			{
-					"label" : "Online MBA" ,
-					"value" : 12
+					"label" : "Enrolled" ,
+					"value" : 133
 				} ,
 				{
-					"label" : "Undergraduate" ,
-					"value" : 24
-				} ,
-				{
-					"label" : "Graduate" ,
-					"value" : 5
+					"label" : "Graduating" ,
+					"value" : 44
 				}
 
 			]
