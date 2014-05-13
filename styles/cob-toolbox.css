@@ -590,6 +590,11 @@ svg .title {
 	background-size: 120%;
 }
 
+#main-replacement header {
+	background-size: 100%;
+	height: auto;
+}
+
 .unbound {
 	overflow: hidden;
 }

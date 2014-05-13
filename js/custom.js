@@ -83,7 +83,7 @@
 			primary_content.remove();
 			$(document).scrollTop(0);
 			$("a.modal-image" ).fluidbox({ stackIndex: 99999 });
-			main_replacement.attr('id', 'primary-content');
+			//main_replacement.attr('id', 'primary-content');
 		});
 
 		// Override the back button to go back to the URL stored in history.
