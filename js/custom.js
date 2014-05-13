@@ -4,6 +4,25 @@
 		// Add Fluidbox to any images designated for modals.
 		$("a.modal-image").fluidbox({ stackIndex: 99999 });
 
+		/**
+		 * The img container holding the cook.
+		 * @type {*|HTMLElement}
+		 */
+		var cook = $('#move-cook-left .bg-move');
+
+		/**
+		 * Where the cook image hits the top of the screen on scroll.
+		 *
+		 * @type {number}
+		 */
+		var cook_offset = Math.floor(cook.offset().top);
+
+
+		cook.attr('data-' + (cook_offset + 15), 'transform: translate3d(100px, 0px, 0px);' );
+		cook.attr('data-' + (cook_offset + cook.height()), 'transform: translate3d(0px, 0px, 0px');
+
+		skrollr.init({forceHeight: false, smoothScrolling: true});
+
 		// Load new page content into the next-content-container via PJAX
 		$('.page-anchor').on('click', function(e) {
 			e.preventDefault();
@@ -41,7 +60,7 @@
 		 *
 		 * @type {number}
 		 */
-		var scroll_to = Math.floor( main_replacement.find('img').first().offset().top );
+		var scroll_to = Math.floor( main_replacement.offset().top );
 
 		// Add some Skrollr data attributes to initiate CSS transformations on scroll.
 		primary_content.attr('data-' + (scroll_to - 200), 'transform: scaleX(1) scaleY(1);' );
@@ -64,7 +83,7 @@
 			primary_content.remove();
 			$(document).scrollTop(0);
 			$("a.modal-image" ).fluidbox({ stackIndex: 99999 });
-			main_replacement.attr('id', 'primary-content');
+			//main_replacement.attr('id', 'primary-content');
 		});
 
 		// Override the back button to go back to the URL stored in history.
@@ -74,3 +93,4 @@
 		});
 	});
 }(jQuery, window));
+
