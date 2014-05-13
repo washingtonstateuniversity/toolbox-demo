@@ -20,7 +20,7 @@
 
 	$(document ).ready(function(){
 		var chart1_container = $('#chart1-container');
-		var chart_width = chart1_container.width();
+		var chart_width = chart1_container.width() - 100;
 
 		chart1_container.append('<div class="chart full with-3d-shadow with-transitions" id="chart1">' +
 			'<svg width="' + chart_width + '" height="200" viewBox="0 0 ' + chart_width + ' 200"></svg>' +
@@ -31,7 +31,7 @@
 			chart = nv.models.multiBarHorizontalChart()
 				.x(function(d) { return d.label })
 				.y(function(d) { return d.value })
-				.margin({top: 30, right: 20, bottom: 50, left: 90})
+				.margin({top: 30, right: 20, bottom: 50, left: 110})
 //.showValues(true)
 				.tooltips(true)
 //.barColor(d3.scale.category20().range())
