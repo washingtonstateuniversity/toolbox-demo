@@ -322,11 +322,15 @@ nv.addGraph(function() {
 	return chart;
 });
 
-defaultChartConfig("chart1", histcatexplong);
-defaultChartConfig("chart3", histcatexplong_singledatapoint);
-defaultChartConfig("chart4", histcatexplong_twodatapoint);
-defaultChartConfig("chart5", histcatexplong_withholes);
-defaultChartConfig("chart6", totalRandom(), false);
-defaultChartConfig("chart7", nPoints(),false);
-defaultChartConfig("chart8", []);
-defaultChartConfig("chart9", histcatexpshort,true);
+(function($){
+	$(document ).ready(function(){
+		var chart1_container = $('#chart1-container');
+		var chart_width = chart1_container.width();
+
+		chart1_container.append('<div class="chart full" id="chart1">' +
+			'<svg width="' + chart_width + '" height="500" viewBox="0 0 ' + chart_width + ' 500"></svg>' +
+			'</div>');
+
+		defaultChartConfig("chart1", histcatexplong);
+	});
+}(jQuery));
