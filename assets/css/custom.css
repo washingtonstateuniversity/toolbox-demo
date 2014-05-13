@@ -5,3 +5,11 @@
 	color: #fff;
 	font-size: 43px;
 }
+
+#primary-content header,
+#main-replacement header {
+	height: 400px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: 120%;
+}

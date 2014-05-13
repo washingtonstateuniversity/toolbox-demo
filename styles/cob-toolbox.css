@@ -114,8 +114,10 @@ p {
 	min-height: 600px;
 	width:100%;
 	padding:0 0 300px 0;
-	background: url(../images/cook2.jpg) 0% 50% no-repeat;
-	background-size: 120% auto;
+	background-image: url('../images/cook2.jpg');
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: 120%;
 }
 
 .blue{

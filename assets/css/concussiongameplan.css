@@ -1,0 +1,412 @@
+body { background:#e4e6e0; *background:#fff; }
+.main { *width:1024px !important; max-width:2600px; *overflow:hidden; margin:0 auto -72px; color:#505050; font-size:1.416em; background:#e4e6e0; }
+.row { position:relative; z-index:2; max-width:980px; margin:0 auto; }
+#globalheader { z-index:10; }
+
+/* video */
+.video-wrapper .gallery-view { text-align:left; }
+.video-wrapper .gallery-view .gallery-content { text-align:center; }
+.video-wrapper .moviePanel .video,
+.video-wrapper .moviePanel object { margin:0; }
+.video-wrapper a.block span { color:#505050; }
+.video-wrapper a.block:hover span { color:#0088cc; text-decoration:none; }
+.video-wrapper .play-img { position:relative; z-index:1; }
+.video-wrapper .play-btn { position:absolute; z-index:2; top:50%; left:50%; width:76px; height:76px; margin:-38px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/play.png); }
+.video-wrapper a.block:hover .play-btn { background-position:0 -76px; }
+@media only screen {
+	.video-wrapper .play-btn { background-image:url(/v/your-verse/concussion-game-plan/a/images/play.svg); }
+}
+
+.slim .ACMediaControls .ACMediaController .trackPanel { width:80px !important; }
+
+/* header */
+.header { position:relative; z-index:1; min-height:942px; }
+.header .hero { position:absolute; z-index:1; left:50%; margin-left:-512px; }
+.header .row { padding:147px 0 0; }
+.header .column.last { margin-right:9px; }
+.header h1 { margin-bottom:7px; }
+
+/* not just football */
+.not-just-football { padding:40px 0 90px; }
+.not-just-football h1 { margin-bottom:0; }
+.not-just-football p { padding:0 53px 12px; }
+.not-just-football .stats { margin-bottom:-25px; text-align:center; }
+.not-just-football .stat { position:relative; z-index:1; display:inline-block; *display:inline; zoom:1; width:184px; padding:52px 0 0; margin:0 13px; background:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/stat_circle.png) no-repeat; }
+.not-just-football .stat.ac-ambient-canplay { background:transparent; }
+.not-just-football .stat .canvas { position:absolute; z-index:1; top:0; left:0; display:block; width:186px; height:186px; }
+.not-just-football .stat img { position:relative; z-index:2; }
+.not-just-football .stat h2 { display:inline-block; position:relative; z-index:1; top:-13px; *top:0; }
+.not-just-football .stat.ac-ambient-canplay .total { opacity:0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.not-just-football .stat.ac-ambient-canplay.fadein .total { opacity:1;
+	-webkit-transition:opacity 0.55s ease-out 0.35s;
+	-moz-transition:opacity 0.55s ease-out 0.35s;
+	transition:opacity 0.55s ease-out 0.35s;
+}
+.not-just-football .stat.ac-ambient-canplay .icon { opacity:0;
+	-webkit-transform:translate3d(0,-5px,0);
+	-moz-transform:translate3d(0,-5px,0);
+	transform:translate3d(0,-5px,0);
+}
+.not-just-football .stat.ac-ambient-canplay.fadein .icon { opacity:1;
+	-webkit-transition:-webkit-transform 0.7s, opacity 0.45s ease-out;
+	-moz-transition:   -moz-transform 0.7s, opacity 0.45s ease-out;
+	transition:        transform 0.7s, opacity 0.45s ease-out;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.not-just-football .stat.ac-ambient-canplay h2 { opacity:0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.not-just-football .stat.ac-ambient-canplay.fadein h2 { opacity:1;
+	-webkit-transition:opacity 0.45s ease-out;
+	-moz-transition:opacity 0.45s ease-out;
+	transition:opacity 0.45s ease-out;
+}
+.not-just-football .caption { *display:block; *margin-top:22px; color:#929292; font-size:0.8235em; }
+
+/* quote: in the past */
+.in-the-past:before,
+.in-the-past:after { display:block; position:relative; left:50%; width:592px; margin-left:-296px; border-top:1px solid #bcbdba; text-align:center; content:''; }
+.in-the-past:before { margin-bottom:35px; }
+.in-the-past:after { margin-top:35px; }
+
+/* types of concussion */
+.types-of-concussion { padding-top:120px; }
+.types-of-concussion h2 { margin-left:-3px; }
+.types-of-concussion .column > p { padding-right:40px; }
+.types-of-concussion .column.last { width:445px; font-size:0.8235em; }
+
+.types-of-concussion .replay { display:inline-block; position:absolute; top:0; left:50%; width:78px; height:78px; margin:35px -39px; border-radius:78px; font-size:0.9285em; line-height:1; background:rgba(255,255,255,0.75); opacity:1;
+	-webkit-transition:opacity 0.3s ease-out;
+	-moz-transition:opacity 0.3s ease-out;
+	transition:opacity 0.3s ease-out;
+}
+.types-of-concussion .replay.disabled { width:0; height:0; overflow:hidden; border:none; opacity:0; }
+.types-of-concussion .replay .icon { display:block; width:30px; height:30px; margin:17px auto -1px; background:url(/v/your-verse/concussion-game-plan/a/images/replay.svg); background-size:100%; background-position:2px 2px;
+	-webkit-transition:-webkit-transform 0.4s;
+	-moz-transition:   -moz-transform 0.4s;
+	transition:        transform 0.4s;
+	-webkit-transform-origin:50%;
+	-moz-transform-origin:50%;
+	transform-origin:50%;
+	-webkit-transform:translate3d(0,0,0) rotate(0deg);
+	-moz-transform:translate3d(0,0,0) rotate(0deg);
+	transform:translate3d(0,0,0) rotate(0deg);
+}
+.types-of-concussion .replay:hover .icon {
+	-webkit-transform:translate3d(0,0,0) rotate(360deg);
+	-moz-transform:translate3d(0,0,0) rotate(360deg);
+	transform:translate3d(0,0,0) rotate(360deg);
+}
+
+.types-of-concussion .diagram { position:relative; z-index:1; overflow:hidden; }
+.types-of-concussion .diagram .impact { height:244px; }
+.types-of-concussion .diagram.ac-ambient-play .impact {
+	-webkit-transform-origin:50% 100%;
+	-moz-transform-origin:50% 100%;
+	transform-origin:50% 100%;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	-webkit-animation:impact-animation 3s ease-out 0.6s 1;
+	-moz-animation:impact-animation 3s ease-out 0.6s 1;
+	animation:impact-animation 3s ease-out 0.6s 1;
+}
+@-webkit-keyframes impact-animation {
+	3% { -webkit-transform:translate3d(0,0,0) rotate(-7deg); }
+}
+@-moz-keyframes impact-animation {
+	3% { -moz-transform:translate3d(0,0,0) rotate(-7deg); }
+}
+@keyframes impact-animation {
+	3% { transform:translate3d(0,0,0) rotate(-7deg); }
+}
+.types-of-concussion .diagram .impact-brain { position:absolute; z-index:2; left:50%; margin-left:-139px;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.types-of-concussion .diagram.ac-ambient-play .impact-brain {
+	-webkit-animation:impactBrainAnim 0.85s ease-out 0.6s 1;
+	-moz-animation:impactBrainAnim 0.85s ease-out 0.6s 1;
+	animation:impactBrainAnim 0.85s ease-out 0.6s 1;
+}
+@-webkit-keyframes impactBrainAnim {
+	2%  { -webkit-transform:translate3d(-7px,0,0); }
+	25% { -webkit-transform:translate3d(5px,0,0); }
+}
+@-moz-keyframes impactBrainAnim {
+	2%  { -moz-transform:translate3d(-7px,0,0); }
+	25% { -moz-transform:translate3d(5px,0,0); }
+}
+@keyframes impactBrainAnim {
+	2%  { transform:translate3d(-7px,0,0); }
+	25% { transform:translate3d(5px,0,0); }
+}
+.types-of-concussion .diagram .impact-brain-red-front { position:absolute; z-index:2;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.types-of-concussion .diagram.ac-ambient-canplay .impact-brain-red-front { opacity:0; }
+.types-of-concussion .diagram.ac-ambient-willplay .impact-brain-red-front { opacity:0;
+	-webkit-transition:opacity 0.2s ease-out 0s;
+	-moz-transition:opacity 0.2s ease-out 0s;
+	transition:opacity 0.2s ease-out 0s;
+}
+.types-of-concussion .diagram.ac-ambient-play .impact-brain-red-front { opacity:1;
+	-webkit-transition:none;
+	-moz-transition:none;
+	transition:none;
+	-webkit-animation:impact-red-animation 3s ease-out 0.7s 1 backwards;
+	-moz-animation:impact-red-animation 3s ease-out 0.7s 1 backwards;
+	animation:impact-red-animation 3s ease-out 0.7s 1 backwards;
+}
+.types-of-concussion .diagram .impact-brain-red-back { position:absolute; z-index:3;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.types-of-concussion .diagram.ac-ambient-canplay .impact-brain-red-back { opacity:0; }
+.types-of-concussion .diagram.ac-ambient-willplay .impact-brain-red-back { opacity:0;
+	-webkit-transition:opacity 0.2s ease-out 0s;
+	-moz-transition:opacity 0.2s ease-out 0s;
+	transition:opacity 0.2s ease-out 0s;
+}
+.types-of-concussion .diagram.ac-ambient-play .impact-brain-red-back { opacity:1;
+	-webkit-transition:none;
+	-moz-transition:none;
+	transition:none;
+	-webkit-animation:impact-red-animation 3s ease-out 0.85s 1 backwards;
+	-moz-animation:impact-red-animation 3s ease-out 0.85s 1 backwards;
+	animation:impact-red-animation 3s ease-out 0.85s 1 backwards;
+}
+@-webkit-keyframes impact-red-animation {
+	0%   { opacity:0; }
+	20%  { opacity:1; }
+	40%  { opacity:0.5; }
+	60%  { opacity:1; }
+	80%  { opacity:0.5; }
+	100% { opacity:1; }
+}
+@-moz-keyframes impact-red-animation {
+	0%   { opacity:0; }
+	20%  { opacity:1; }
+	40%  { opacity:0.5; }
+	60%  { opacity:1; }
+	80%  { opacity:0.5; }
+	100% { opacity:1; }
+}
+@keyframes impact-red-animation {
+	0%   { opacity:0; }
+	20%  { opacity:1; }
+	40%  { opacity:0.5; }
+	60%  { opacity:1; }
+	80%  { opacity:0.5; }
+	100% { opacity:1; }
+}
+.types-of-concussion .video-wrapper { margin-top:36px; padding-top:48px; border-top:1px solid #cfcfc9; }
+.types-of-concussion .video-wrapper .moviePanel { width:445px !important; height:251px !important; }
+
+/* mapping */
+.mapping { position:relative; z-index:1; }
+.mapping h1 { margin-bottom:0; }
+.mapping h3 { margin-bottom:-5px; *margin-bottom:0; }
+.mapping .hero { position:relative; z-index:1; top:-220px; width:1024px; margin:0 auto -220px; }
+.mapping .row { padding-top:93px; }
+.mapping .row > p { padding:0 80px 40px; }
+.mapping .column .caption { position:relative; z-index:1; }
+.mapping .column .caption:after { position:absolute; top:5px; left:163px; width:15px; height:15px; border-radius:15px; content:''; }
+.mapping .column.pre-graph .caption:after { background:#7eca66; }
+.mapping .column.post-graph .caption:after { left:180px; background:#ff9999; }
+.mapping .column.ac-ambient-canplay .labels { position:relative; z-index:2; opacity:0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.mapping .column.fadein .labels { opacity:1;
+	-webkit-transition:opacity 1.5s ease-out 0.5s;
+	-moz-transition:opacity 1.5s ease-out 0.5s;
+	transition:opacity 1.5s ease-out 0.5s;
+}
+.mapping .column.ac-ambient-canplay .caption:after {
+	-webkit-transform:scale(0);
+	-moz-transform:scale(0);
+	transform:scale(0);
+}
+.mapping .column.fadein .caption:after {
+	-webkit-transition:-webkit-transform 0.65s ease-out 0.2s;
+	-moz-transition:   -moz-transform 0.65s ease-out 0.2s;
+	transition:        transform 0.65s ease-out 0.2s;
+	-webkit-transform:scale(1);
+	-moz-transform:scale(1);
+	transform:scale(1);
+}
+.mapping .graph { position:relative; z-index:0; margin-bottom:13px; }
+.mapping .pre-graph .graph { background:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/pre_results_graph.png) no-repeat; background-position:30px 2px; }
+.mapping .post-graph .graph { background:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/post_results_graph.png) no-repeat; background-position:30px 2px; }
+.mapping .pre-graph .caption { background:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/pre_key.png) no-repeat; background-position:163px 5px; }
+.mapping .post-graph .caption { background:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/post_key.png) no-repeat; background-position:180px 5px; }
+.mapping .column.ac-ambient-canplay .graph,
+.mapping .column.ac-ambient-canplay .caption { background:transparent; background-position:0 0; }
+.mapping .graph .canvas { position:absolute; z-index:1; top:0; left:50%; width:420px; height:412px; margin-left:-210px; }
+.mapping .graph img { position:relative; z-index:2; }
+.mapping .ipad { position:relative; z-index:1; top:-14px; margin:0 -118px; }
+.mapping .ipad .caption { position:relative; z-index:2; top:-45px; width:760px; margin:0 auto; font-size:0.8235em; }
+
+/* slideshow */
+.slideshow-wrap { position:relative; z-index:1; overflow:hidden; }
+.slideshow { position:relative; z-index:1; width:1024px; margin:32px auto 0; }
+.slideshow .gallery-view-wrapper { position:relative; z-index:1; overflow:hidden; width:1161px; margin:0 -68px; }
+.slideshow .gallery-view-wrapper:before,
+.slideshow .gallery-view-wrapper:after { position:absolute; z-index:1002; top:0; width:1000px; height:404px; background:#e4e6e0; opacity:0.85; content:''; }
+.slideshow .gallery-view-wrapper:before { left:-1000px; }
+.slideshow .gallery-view-wrapper:after { right:-1000px; }
+.slideshow .gallery-view { position:relative; z-index:1; width:6966px;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.slideshow .gallery-content { position:relative; z-index:1; width:1161px; float:left; }
+.slideshow .caption { width:1024px; padding-top:52px; margin-left:68px; opacity:0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.slideshow .active .caption { opacity:1;
+	-webkit-transition:opacity 0.5s ease-out 0.5s;
+	-moz-transition:opacity 0.5s ease-out 0.5s;
+	transition:opacity 0.5s ease-out 0.5s;
+}
+@media only screen and (max-device-width:768px) { /* on device */
+	#main .dot-nav li a { -webkit-pointer-events:none; pointer-events:none; }
+	.slideshow .caption { opacity:1; }
+}
+.slideshow .caption p { width:700px; padding:7px 0 0; margin:0 auto; font-size:0.8824em; }
+.dot-nav { position:absolute; z-index:2; top:433px; }
+.dot-nav:nth-child(1n) li { margin:0 7px; }
+.dot-nav:nth-child(1n) li a { width:6px; height:6px; margin-top:2px; background:#949494;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.dot-nav:nth-child(1n) li a.active { margin-top:0; background:none; border:2px solid #2092ef;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+/* paddle nav */
+.paddle-nav-container { position:absolute; z-index:10; width:100%; height:404px; margin-top:32px; opacity:0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	-webkit-transition:opacity 0.3s ease-out 0.2s;
+	-moz-transition:opacity 0.3s ease-out 0.2s;
+	transition:opacity 0.3s ease-out 0.2s;
+}
+.slideshow-wrap:hover .paddle-nav-container { opacity:1;
+	-webkit-transition:opacity 0.3s ease-out 0s;
+	-moz-transition:opacity 0.3s ease-out 0s;
+	transition:opacity 0.3s ease-out 0s;
+}
+.paddle-nav { position:relative; z-index:10; width:100%; height:100%; max-width:1159px; margin:0 auto; }
+.paddle-nav li .arrow.disabled { display:none; }
+.paddle-nav .arrow { position:absolute; z-index:10; top:137px; width:68px; height:130px; }
+.paddle-nav .arrow.previous { left:20px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/paddle_previous.png); }
+.paddle-nav .arrow.next { right:20px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/paddle_next.png); }
+@media only screen and (min-width:1376px) {
+	.paddle-nav { max-width:1376px; }
+}
+@media only screen and (max-device-width:768px) {
+	.paddle-nav-container { display:none; }
+}
+
+/* balance */
+.balance { position:relative; z-index:1; height:1008px; }
+.balance:before,
+.balance:after { position:absolute; z-index:2; top:0; left:0; width:100%; height:40px; background:#e4e6e0; content:''; }
+.balance:before {
+	background:-webkit-linear-gradient(top, rgba(228,230,224,1) 0%, rgba(228,230,224,0) 100%);
+	background:   -moz-linear-gradient(top, rgba(228,230,224,1) 0%, rgba(228,230,224,0) 100%);
+	background:        linear-gradient(top, rgba(228,230,224,1) 0%, rgba(228,230,224,0) 100%);
+}
+.balance:after { top:2366px; /* height of hero minus height of this */
+	background:-webkit-linear-gradient(top, rgba(228,230,224,0) 0%, rgba(228,230,224,1) 100%);
+	background:   -moz-linear-gradient(top, rgba(228,230,224,0) 0%, rgba(228,230,224,1) 100%);
+	background:        linear-gradient(top, rgba(228,230,224,0) 0%, rgba(228,230,224,1) 100%);
+}
+.balance .hero { position:absolute; z-index:1; left:50%; margin-left:-512px; }
+.balance .row { padding-top:282px; }
+
+.balance .player { position:absolute; z-index:3; }
+.balance .player-22 { top:34px; left:50%; margin:0 240px;
+	-webkit-transform-origin:10% 40%;
+	-moz-transform-origin:10% 40%;
+	transform-origin:10% 40%;
+}
+.balance .player-11 { top:260px; right:50%; margin:0 -528px;
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	transform-origin:0 0;
+}
+.balance .player-12 { top:1300px; left:50%; margin:0 -500px;
+	-webkit-transform-origin:90% 10%;
+	-moz-transform-origin:90% 10%;
+	transform-origin:90% 10%;
+}
+
+/* back in the game */
+.back-in-the-game { position:relative; z-index:1; height:1338px; }
+.back-in-the-game .hero { position:absolute; z-index:1; top:227px; left:50%; margin-left:-512px; }
+.back-in-the-game .column { width:455px; }
+.back-in-the-game h2 { margin-left:-6px; }
+.back-in-the-game .video-wrapper { width:445px; margin:40px 0; }
+.back-in-the-game .video-wrapper .video-thumb span { font-size:0.8235em; }
+.back-in-the-game .video-wrapper .moviePanel { width:445px !important; height:251px !important; }
+
+/* share */
+.share { margin-top:35px; }
+.share a { margin:0 20px; }
+
+/* verse nav */
+#concussion-game-plan .verse-navigation { margin:0 auto; }
+#concussion-game-plan .verse-navigation ul { position:relative; margin-top:85px; }
+
+/* footer */
+.gf-wrapper { min-width:1024px; *max-width:1024px; margin:0 auto; background:#e4e6e0; }
+
+/* sosumi */
+#concussion-game-plan .sosumi { margin-top:0; border-top:none; }
+
+/* media queries */
+@media only screen and (min-width:1024px) {
+
+	/* header */
+	.header .hero:before,
+	.header .hero:after { position:absolute; top:0; z-index:1; width:788px; height:942px; background-repeat:no-repeat; content:''; }
+	.header .hero:before { right:-788px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/header_hero_right.jpg); }
+	.header .hero:after { left:-788px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/header_hero_left.jpg); }
+
+	/* mapping */
+	.mapping .hero:before,
+	.mapping .hero:after { position:absolute; top:0; z-index:1; width:788px; height:1014px; background-repeat:no-repeat; content:''; }
+	.mapping .hero:before { right:-788px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/mapping_hero_right.jpg); }
+	.mapping .hero:after { left:-788px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/mapping_hero_left.jpg); }
+
+	/* balance */
+	.balance .hero:before,
+	.balance .hero:after { position:absolute; top:0; z-index:1; width:788px; height:2406px; background-repeat:no-repeat; content:''; }
+	.balance .hero:before { right:-788px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/balance_hero_right.jpg); }
+	.balance .hero:after { left:-788px; background-image:url(http://images.apple.com/v/your-verse/concussion-game-plan/a/images/balance_hero_left.jpg); }
+
+	/* gallery */
+	.slideshow .gallery-view-wrapper { overflow:visible; }
+}

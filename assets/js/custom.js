@@ -4,6 +4,22 @@
 		// Add Fluidbox to any images designated for modals.
 		$("a.modal-image").fluidbox({ stackIndex: 99999 });
 
+		var main_replacement = $('#main-replacement header');
+
+		var cook = $('#move-cook-left');
+		var cook_offset = Math.floor(cook.offset().top);
+
+		// -477
+		var scroll_start = main_replacement.offset().top - jQuery(window ).height();
+		var scroll_mid = scroll_start + 150;
+
+		cook.attr('data-' + (cook_offset + 15), 'background-position: 0px 0px;' );
+		cook.attr('data-' + (cook_offset + cook.height()), 'background-position: -105px 0px;');
+
+		main_replacement.attr('data-' + scroll_start, 'background-position: 35% 0%;');
+		main_replacement.attr('data-' + scroll_mid, 'background-position: 17.5% 17.5%;');
+		main_replacement.attr('data-bottom', 'background-position: 0% 35%;');
+		skrollr.init({forceHeight: false, smoothScrolling: true});
 		// Load new page content into the next-content-container via PJAX
 		$('.page-anchor').on('click', function(e) {
 			e.preventDefault();
@@ -41,7 +57,7 @@
 		 *
 		 * @type {number}
 		 */
-		var scroll_to = Math.floor( main_replacement.find('img').first().offset().top );
+		var scroll_to = Math.floor( main_replacement.offset().top );
 
 		// Add some Skrollr data attributes to initiate CSS transformations on scroll.
 		primary_content.attr('data-' + (scroll_to - 200), 'transform: scaleX(1) scaleY(1);' );
@@ -74,3 +90,4 @@
 		});
 	});
 }(jQuery, window));
+
