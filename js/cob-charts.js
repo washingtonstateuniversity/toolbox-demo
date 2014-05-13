@@ -17,7 +17,7 @@
 		}
 
 	];
-	$(document ).ready(function(){
+	function load_chart() {
 		var chart1_container = $('#chart1-container');
 		var chart_width = chart1_container.width() - 100;
 
@@ -51,5 +51,6 @@
 
 			return chart;
 		});
-	});
+	}
+	window.load_chart = load_chart;
 }(jQuery,nv));

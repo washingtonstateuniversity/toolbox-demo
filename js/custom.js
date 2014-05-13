@@ -91,6 +91,7 @@
 		main_replacement.append( next_content_container.html() );
 		next_content_container.html(' ');
 
+		load_chart();
 		/**
 		 * Initiate an animation that scrolls the page up to the top of the next content's
 		 * main image. Skrollr handles the transform properties via CSS. Once the scroll
