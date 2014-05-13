@@ -168,12 +168,17 @@ em{
 
 
 /*  SVG Bar Graph   ============================================================================= */
+#chart1-container .chart {
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
 
 .nvd3 .nv-multibar .nv-groups rect,
 .nvd3 .nv-multibarHorizontal .nv-groups rect,
 .nvd3 .nv-discretebar .nv-groups rect {
   stroke-opacity: 0;
-  fill:#F3874B;
+  fill:#00a5bd;
   transition: fill-opacity 250ms linear;
   -moz-transition: fill-opacity 250ms linear;
   -webkit-transition: fill-opacity 250ms linear;
@@ -213,7 +218,6 @@ svg .title {
  font: bold 10px #5E6A71;
 }
 .nvd3 .nv-background {
-  fill: white;
   fill-opacity: 0;
   /*
   pointer-events: none;

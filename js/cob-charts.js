@@ -2,28 +2,31 @@
 	var long_short_data = [
 		{
 			key: 'Medical School graduates per 100,000 residents',
-			color: '#F26D4E',
+			color: '#00a5bd',
 			values: [
-				{
-					"label" : "Washington" ,
-					"value" : 3
+			{
+					"label" : "Online MBA" ,
+					"value" : 12
 				} ,
 				{
-					"label" : "Missouri" ,
-					"value" : 15.2
+					"label" : "Undergraduate" ,
+					"value" : 24
+				} ,
+				{
+					"label" : "Graduate" ,
+					"value" : 5
 				}
 
 			]
 		}
 
 	];
-
 	$(document ).ready(function(){
 		var chart1_container = $('#chart1-container');
 		var chart_width = chart1_container.width();
 
 		chart1_container.append('<div class="chart full with-3d-shadow with-transitions" id="chart1">' +
-			'<svg width="' + chart_width + '" height="200" viewBox="200 0 ' + chart_width + ' 200"></svg>' +
+			'<svg width="' + chart_width + '" height="300" viewBox="300  ' + chart_width + ' 300"></svg>' +
 			'</div>');
 
 		var chart;
