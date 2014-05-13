@@ -6,15 +6,15 @@
 
 		var main_replacement = $('#main-replacement header');
 
-		var cook = $('#move-cook-left');
+		var cook = $('#move-cook-left .bg-move');
 		var cook_offset = Math.floor(cook.offset().top);
 
 		// -477
 		var scroll_start = main_replacement.offset().top - jQuery(window ).height();
 		var scroll_mid = scroll_start + 150;
-
-		cook.attr('data-' + (cook_offset + 15), 'background-position: 0px 0px;' );
-		cook.attr('data-' + (cook_offset + cook.height()), 'background-position: -105px 0px;');
+		/* transform':'translate3d(0px,' + yBgPosition + 'px, 0px) */
+		cook.attr('data-' + (cook_offset + 15), 'transform: translate3d(100px, 0px, 0px);' );
+		cook.attr('data-' + (cook_offset + cook.height()), 'transform: translate3d(0px, 0px, 0px');
 
 		main_replacement.attr('data-' + scroll_start, 'background-position: 35% 0%;');
 		main_replacement.attr('data-' + scroll_mid, 'background-position: 17.5% 17.5%;');
