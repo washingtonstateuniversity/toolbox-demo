@@ -92,5 +92,48 @@
 			return false;
 		});
 	});
+
+	var frame_interval = 41.6; // 24fps
+	var frame_count = 0; // maintain count of frame
+	var total_frames = 221;
+	var new_image;
+	var image_context = 'load';
+
+	function pad(n, width, z) {
+		z = z || '0';
+		n = n + '';
+		return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+	}
+
+	function build_image() {
+		new_image = new Image();
+		new_image.Id = "classroom-video-" + frame_count;
+		new_image.Name = new_image.Id;
+		new_image.onload = load_image;
+		new_image.src = 'images/classroom-video/classroom-' + pad(frame_count,4) + '.jpg';
+	}
+
+	function load_image() {
+		var image_canvas = document.getElementById('classroom-canvas');
+		if ( image_canvas.getContext ) {
+			var context = image_canvas.getContext('2d');
+			context.drawImage(new_image, 0, 0, 550, 310);
+			if ( 'video' == image_context && frame_count < total_frames ) {
+				frame_count++;
+				setTimeout("build_image()", frame_interval);
+			}
+		}
+	}
+
+	window.build_image = build_image;
+
+	$(document ).ready(function(){
+		build_image();
+		$('#classroom-canvas' ).on('mouseover',function(){
+			image_context = 'video';
+			build_image();
+		})
+	});
+
 }(jQuery, window));
 
