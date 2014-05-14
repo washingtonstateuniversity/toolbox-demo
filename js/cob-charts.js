@@ -19,7 +19,7 @@
 	];
 	function load_chart() {
 		var chart1_container = $('#chart1-container h4');
-		var chart_width = chart1_container.width() - 100;
+		var chart_width = chart1_container.width() - 80;
 
 		chart1_container.after('<div class="chart full with-3d-shadow with-transitions" id="chart1">' +
 			'<svg width="' + chart_width + '" height="200" viewBox="' + chart_width + ' 300"></svg>' +
@@ -30,7 +30,7 @@
 			chart = nv.models.multiBarHorizontalChart()
 				.x(function(d) { return d.label })
 				.y(function(d) { return d.value })
-				.margin({top: 30, right: 20, bottom: 50, left: 120})
+				.margin({top: 40, right: 30, bottom: 40, left: 120})
 //.showValues(true)
 				.tooltips(true)
 //.barColor(d3.scale.category20().range())
