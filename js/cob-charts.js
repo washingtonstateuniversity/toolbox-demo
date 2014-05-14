@@ -19,7 +19,7 @@
 	];
 	function load_chart() {
 		var chart1_container = $('#chart1-container h4');
-		var chart_width = chart1_container.width() - 100;
+		var chart_width = chart1_container.width() - 80;
 
 		chart1_container.after('<div class="chart full with-3d-shadow with-transitions" id="chart1">' +
 			'<svg width="' + chart_width + '" height="200" viewBox="' + chart_width + ' 300"></svg>' +
