@@ -1,5 +1,5 @@
 (function ($, nv, window) {
-
+	var chart_count = 0;
 	var cob_skrollr;
 	var bar_container = '';
 	var long_short_data = [
@@ -82,6 +82,13 @@
 
 			chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
 
+			var scroll_start = Math.floor(chart1_container.offset().top - $(window ).height());
+
+			$('.nv-series-0' ).attr('data-' + (scroll_start + 50),'opacity:0;');
+			$('.nv-series-0' ).attr('data-' + (scroll_start + 300),'opacity:0.25');
+			$('.nv-series-0' ).attr('data-' + (scroll_start + 450 ),'opacity:1;');
+			cob_skrollr.refresh();
+			$('.nv-series-0' ).css('visibility', 'visible');
 			return chart;
 		});
 	}
@@ -183,19 +190,20 @@
 		main_replacement.append( next_content_container.html() );
 		next_content_container.html(' ');
 
-		// Build page 2 charts.
-		load_chart();
-
 		/**
 		 * Initiate an animation that scrolls the page up to the top of the next content's
 		 * main image. Skrollr handles the transform properties via CSS. Once the scroll
 		 * is completed, we remove the primary content and set the scroll to the top.
 		 */
-		$('html, body' ).animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
+		$('html,body' ).animate({ scrollTop: scroll_to }, 800, 'easeOutCubic', function(){
 			primary_content.remove();
 			$(document).scrollTop(0);
 			$("a.modal-image" ).fluidbox({ stackIndex: 99999 });
-			//main_replacement.attr('id', 'primary-content');
+			main_replacement.attr('id', 'primary-content');
+			if ( 0 == chart_count ) {
+				chart_count++;
+				load_chart();
+			}
 		});
 
 		// Override the back button to go back to the URL stored in history.
