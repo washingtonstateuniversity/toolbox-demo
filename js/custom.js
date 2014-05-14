@@ -1,4 +1,67 @@
-(function ($, window) {
+(function ($, nv, window) {
+
+	var cob_skrollr;
+	var bar_container = '';
+	var long_short_data = [
+		{
+			key: 'Spring 2014',
+			color: '#00a5bd',
+			values: [
+				{
+					"label" : "Enrolled" ,
+					"value" : 133
+				} ,
+				{
+					"label" : "Graduating" ,
+					"value" : 44
+				}
+
+			]
+		}
+
+	];
+
+	function load_chart() {
+		var chart;
+
+		var chart1_container = $('#chart1-container h4');
+
+		var chart_width = chart1_container.width() - 80;
+
+		chart1_container.after('<div class="chart full with-3d-shadow with-transitions" id="chart1">' +
+			'<svg width="' + chart_width + '" height="200" viewBox="' + chart_width + ' 300"></svg>' +
+			'</div>');
+
+		nv.addGraph(function() {
+			chart = nv.models.multiBarHorizontalChart()
+				.x(function(d) { return d.label })
+				.y(function(d) { return d.value })
+				.margin({top: 40, right: 30, bottom: 40, left: 120})
+				.tooltips(true)
+				.transitionDuration(250)
+				.stacked(false)
+				.showControls(false);
+
+			chart.yAxis.tickFormat(d3.format(',.2f'));
+
+			d3.select('#chart1 svg').datum(long_short_data).call(chart);
+
+			nv.utils.windowResize(chart.update);
+
+			chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+			return chart;
+		});
+	}
+
+
+	$(document ).ready(function(){
+		build_image();
+		$('#classroom-canvas' ).on('mouseover',function(){
+			image_context = 'video';
+			build_image();
+		})
+	});
 
 	$(document).ready(function(){
 		// Add Fluidbox to any images designated for modals.
@@ -38,7 +101,7 @@
 		cook.attr('data-' + (cook_offset + 15), 'transform: translate3d(100px, 0px, 0px);' );
 		cook.attr('data-' + (cook_offset + cook.height()), 'transform: translate3d(0px, 0px, 0px');
 
-		skrollr.init({forceHeight: false, smoothScrolling: true});
+		cob_skrollr = skrollr.init({forceHeight: false, smoothScrolling: true});
 
 		// Load new page content into the next-content-container via PJAX
 		$('.page-anchor').on('click', function(e) {
@@ -83,8 +146,6 @@
 		primary_content.attr('data-' + (scroll_to - 200), 'transform: scaleX(1) scaleY(1);' );
 		primary_content.attr('data-' + (scroll_to - 25), 'transform: scaleX(.25) scaleY(.75);');
 
-		// Initialize Skrollr so that all data attributes on the page are processed.
-		skrollr.init();
 
 		// Add the replacement content to our replacement container and remove it from
 		// the temporary placeholder node.
@@ -92,6 +153,13 @@
 		next_content_container.html(' ');
 
 		load_chart();
+
+
+		$('.nv-series-0' ).attr('data-463', 'opacity: 0;');
+		$('.nv-series-0' ).attr('data-763', 'opacity: 1;');
+
+		// Initialize Skrollr so that all data attributes on the page are processed.
+
 		/**
 		 * Initiate an animation that scrolls the page up to the top of the next content's
 		 * main image. Skrollr handles the transform properties via CSS. Once the scroll
@@ -143,15 +211,7 @@
 		}
 	}
 
+	window.load_chart = load_chart;
 	window.build_image = build_image;
 
-	$(document ).ready(function(){
-		build_image();
-		$('#classroom-canvas' ).on('mouseover',function(){
-			image_context = 'video';
-			build_image();
-		})
-	});
-
-}(jQuery, window));
-
+}(jQuery, nv, window));
