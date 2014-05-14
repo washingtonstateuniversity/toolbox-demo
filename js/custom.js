@@ -54,18 +54,15 @@
 		});
 	}
 
+	$(document).ready(function(){
+		// Add Fluidbox to any images designated for modals.
+		$("a.modal-image").fluidbox({ stackIndex: 99999 });
 
-	$(document ).ready(function(){
 		build_image();
 		$('#classroom-canvas' ).on('mouseover',function(){
 			image_context = 'video';
 			build_image();
-		})
-	});
-
-	$(document).ready(function(){
-		// Add Fluidbox to any images designated for modals.
-		$("a.modal-image").fluidbox({ stackIndex: 99999 });
+		});
 
 		/**
 		 * The img container holding the cook.
